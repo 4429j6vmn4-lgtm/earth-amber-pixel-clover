@@ -1,0 +1,1 @@
+import{t as e}from"./jsx-runtime-D9MuGByy.js";import{s as t}from"./format-BYOYPdws.js";import{t as n}from"./badge-Dp3AZMSc.js";var r=e(),i={queued:`paper`,roasting:`warning`,packed:`neutral`,shipped:`success`,cancelled:`danger`};function a({status:e}){return(0,r.jsx)(n,{tone:i[e],children:t(e)})}export{a as t};

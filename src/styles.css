@@ -1,29 +1,26 @@
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Instrument+Serif:ital@0;1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,400;0,500;0,600;1,400&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap");
 @import "tailwindcss";
 @import "tw-animate-css";
 
 @theme {
-  --color-bg: #12100e;
-  --color-surface: #1a1815;
-  --color-raised: #221f1b;
-  --color-fg: #f2ebe3;
-  --color-muted: #9a9288;
-  --color-subtle: #6f6960;
-  --color-primary: #efe7dc;
-  --color-primary-fg: #12100e;
-  --color-border: #2c2924;
-  --color-border-strong: #3d3933;
-  --color-success: #8b9a82;
-  --color-warning: #c4b08a;
-  --color-danger: #c17b6e;
-  --color-ring: #efe7dc;
+  --color-bg: #f4f0ea;
+  --color-surface: #fcfaf6;
+  --color-raised: #ffffff;
+  --color-fg: #1a1814;
+  --color-muted: #6b655c;
+  --color-subtle: #8a8378;
+  --color-primary: #1a1814;
+  --color-primary-fg: #fcfaf6;
+  --color-border: #e4ddd3;
+  --color-border-strong: #cfc6b8;
+  --color-success: #5c7a5a;
+  --color-warning: #9a7b4f;
+  --color-danger: #a45a4c;
+  --color-ring: #1a1814;
 
-  --font-sans: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
-  --font-display: "Instrument Serif", "Times New Roman", serif;
-  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
-
-  --text-micro: 0.6875rem;
-  --tracking-brand: 0.22em;
+  --font-sans: "Figtree", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Newsreader", "Times New Roman", serif;
+  --font-mono: ui-monospace, "SF Mono", Menlo, monospace;
 
   --radius-xs: 4px;
   --radius-sm: 8px;
@@ -31,8 +28,8 @@
   --radius-lg: 16px;
   --radius-xl: 24px;
 
-  --shadow-border: 0 0 0 1px rgba(242, 235, 227, 0.08);
-  --shadow-border-hover: 0 0 0 1px rgba(242, 235, 227, 0.14);
+  --shadow-border: 0 0 0 1px rgba(26, 24, 20, 0.08), 0 1px 2px rgba(26, 24, 20, 0.05);
+  --shadow-border-hover: 0 0 0 1px rgba(26, 24, 20, 0.14), 0 2px 6px rgba(26, 24, 20, 0.06);
 
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
 }
@@ -73,7 +70,7 @@
   }
 
   ::selection {
-    background: var(--color-primary);
+    background: var(--color-fg);
     color: var(--color-primary-fg);
   }
 }
@@ -96,24 +93,16 @@
 }
 
 .rise-2 {
-  animation-delay: 40ms;
+  animation-delay: 50ms;
 }
 .rise-3 {
-  animation-delay: 80ms;
-}
-.rise-4 {
-  animation-delay: 120ms;
-}
-.rise-5 {
-  animation-delay: 160ms;
+  animation-delay: 100ms;
 }
 
 @media (prefers-reduced-motion: reduce) {
   .rise,
   .rise-2,
-  .rise-3,
-  .rise-4,
-  .rise-5 {
+  .rise-3 {
     animation: none;
   }
 }

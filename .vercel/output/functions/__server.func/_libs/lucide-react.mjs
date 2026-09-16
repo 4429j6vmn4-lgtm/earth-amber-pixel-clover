@@ -1,5 +1,5 @@
-import { o as __toESM } from "../_runtime.mjs";
-import { u as require_react } from "./@floating-ui/react-dom+[...].mjs";
+import { i as __toESM } from "../_runtime.mjs";
+import { n as require_react } from "./@radix-ui/react-compose-refs+[...].mjs";
 //#region node_modules/lucide-react/dist/esm/shared/src/utils.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 /**
@@ -82,62 +82,6 @@ var createLucideIcon = (iconName, iconNode) => {
 * This source code is licensed under the ISC license.
 * See the LICENSE file in the root directory of this source tree.
 */
-var Boxes = createLucideIcon("boxes", [
-	["path", {
-		d: "M2.97 12.92A2 2 0 0 0 2 14.63v3.24a2 2 0 0 0 .97 1.71l3 1.8a2 2 0 0 0 2.06 0L12 19v-5.5l-5-3-4.03 2.42Z",
-		key: "lc1i9w"
-	}],
-	["path", {
-		d: "m7 16.5-4.74-2.85",
-		key: "1o9zyk"
-	}],
-	["path", {
-		d: "m7 16.5 5-3",
-		key: "va8pkn"
-	}],
-	["path", {
-		d: "M7 16.5v5.17",
-		key: "jnp8gn"
-	}],
-	["path", {
-		d: "M12 13.5V19l3.97 2.38a2 2 0 0 0 2.06 0l3-1.8a2 2 0 0 0 .97-1.71v-3.24a2 2 0 0 0-.97-1.71L17 10.5l-5 3Z",
-		key: "8zsnat"
-	}],
-	["path", {
-		d: "m17 16.5-5-3",
-		key: "8arw3v"
-	}],
-	["path", {
-		d: "m17 16.5 4.74-2.85",
-		key: "8rfmw"
-	}],
-	["path", {
-		d: "M17 16.5v5.17",
-		key: "k6z78m"
-	}],
-	["path", {
-		d: "M7.97 4.42A2 2 0 0 0 7 6.13v4.37l5 3 5-3V6.13a2 2 0 0 0-.97-1.71l-3-1.8a2 2 0 0 0-2.06 0l-3 1.8Z",
-		key: "1xygjf"
-	}],
-	["path", {
-		d: "M12 8 7.26 5.15",
-		key: "1vbdud"
-	}],
-	["path", {
-		d: "m12 8 4.74-2.85",
-		key: "3rx089"
-	}],
-	["path", {
-		d: "M12 13.5V8",
-		key: "1io7kd"
-	}]
-]);
-/**
-* @license lucide-react v0.510.0 - ISC
-*
-* This source code is licensed under the ISC license.
-* See the LICENSE file in the root directory of this source tree.
-*/
 var Check = createLucideIcon("check", [["path", {
 	d: "M20 6 9 17l-5-5",
 	key: "1gmf2c"
@@ -148,118 +92,13 @@ var Check = createLucideIcon("check", [["path", {
 * This source code is licensed under the ISC license.
 * See the LICENSE file in the root directory of this source tree.
 */
-var ChevronDown = createLucideIcon("chevron-down", [["path", {
-	d: "m6 9 6 6 6-6",
-	key: "qrunsl"
+var Plus = createLucideIcon("plus", [["path", {
+	d: "M5 12h14",
+	key: "1ays0h"
+}], ["path", {
+	d: "M12 5v14",
+	key: "s699le"
 }]]);
-/**
-* @license lucide-react v0.510.0 - ISC
-*
-* This source code is licensed under the ISC license.
-* See the LICENSE file in the root directory of this source tree.
-*/
-var Coffee = createLucideIcon("coffee", [
-	["path", {
-		d: "M10 2v2",
-		key: "7u0qdc"
-	}],
-	["path", {
-		d: "M14 2v2",
-		key: "6buw04"
-	}],
-	["path", {
-		d: "M16 8a1 1 0 0 1 1 1v8a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V9a1 1 0 0 1 1-1h14a4 4 0 1 1 0 8h-1",
-		key: "pwadti"
-	}],
-	["path", {
-		d: "M6 2v2",
-		key: "colzsn"
-	}]
-]);
-/**
-* @license lucide-react v0.510.0 - ISC
-*
-* This source code is licensed under the ISC license.
-* See the LICENSE file in the root directory of this source tree.
-*/
-var Layers = createLucideIcon("layers", [
-	["path", {
-		d: "M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z",
-		key: "zw3jo"
-	}],
-	["path", {
-		d: "M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12",
-		key: "1wduqc"
-	}],
-	["path", {
-		d: "M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17",
-		key: "kqbvx6"
-	}]
-]);
-/**
-* @license lucide-react v0.510.0 - ISC
-*
-* This source code is licensed under the ISC license.
-* See the LICENSE file in the root directory of this source tree.
-*/
-var LayoutDashboard = createLucideIcon("layout-dashboard", [
-	["rect", {
-		width: "7",
-		height: "9",
-		x: "3",
-		y: "3",
-		rx: "1",
-		key: "10lvy0"
-	}],
-	["rect", {
-		width: "7",
-		height: "5",
-		x: "14",
-		y: "3",
-		rx: "1",
-		key: "16une8"
-	}],
-	["rect", {
-		width: "7",
-		height: "9",
-		x: "14",
-		y: "12",
-		rx: "1",
-		key: "1hutg5"
-	}],
-	["rect", {
-		width: "7",
-		height: "5",
-		x: "3",
-		y: "16",
-		rx: "1",
-		key: "ldoo1y"
-	}]
-]);
-/**
-* @license lucide-react v0.510.0 - ISC
-*
-* This source code is licensed under the ISC license.
-* See the LICENSE file in the root directory of this source tree.
-*/
-var ScrollText = createLucideIcon("scroll-text", [
-	["path", {
-		d: "M15 12h-5",
-		key: "r7krc0"
-	}],
-	["path", {
-		d: "M15 8h-5",
-		key: "1khuty"
-	}],
-	["path", {
-		d: "M19 17V5a2 2 0 0 0-2-2H4",
-		key: "zz82l3"
-	}],
-	["path", {
-		d: "M8 21h12a2 2 0 0 0 2-2v-1a1 1 0 0 0-1-1H11a1 1 0 0 0-1 1v1a2 2 0 1 1-4 0V5a2 2 0 1 0-4 0v2a1 1 0 0 0 1 1h3",
-		key: "1ph1d7"
-	}]
-]);
 /**
 * @license lucide-react v0.510.0 - ISC
 *
@@ -294,4 +133,4 @@ var X = createLucideIcon("x", [["path", {
 	key: "d8bk6v"
 }]]);
 //#endregion
-export { Layers as a, Check as c, LayoutDashboard as i, Boxes as l, TriangleAlert as n, Coffee as o, ScrollText as r, ChevronDown as s, X as t };
+export { Check as i, TriangleAlert as n, Plus as r, X as t };

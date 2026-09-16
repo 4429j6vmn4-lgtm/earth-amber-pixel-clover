@@ -9,152 +9,50 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as AppRouteImport } from './routes/_app'
-import { Route as AppIndexRouteImport } from './routes/_app/index'
-import { Route as AppCatalogRouteImport } from './routes/_app/catalog'
-import { Route as AppCellarRouteImport } from './routes/_app/cellar'
-import { Route as AppOrdersRouteImport } from './routes/_app/orders'
-import { Route as AppStackRouteImport } from './routes/_app/stack'
+import { Route as IndexRouteImport } from './routes/index'
 
-const AppRoute = AppRouteImport.update({
-  id: '/_app',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const AppIndexRoute = AppIndexRouteImport.update({
+const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
-  getParentRoute: () => AppRoute,
-} as any)
-const AppCatalogRoute = AppCatalogRouteImport.update({
-  id: '/catalog',
-  path: '/catalog',
-  getParentRoute: () => AppRoute,
-} as any)
-const AppCellarRoute = AppCellarRouteImport.update({
-  id: '/cellar',
-  path: '/cellar',
-  getParentRoute: () => AppRoute,
-} as any)
-const AppOrdersRoute = AppOrdersRouteImport.update({
-  id: '/orders',
-  path: '/orders',
-  getParentRoute: () => AppRoute,
-} as any)
-const AppStackRoute = AppStackRouteImport.update({
-  id: '/stack',
-  path: '/stack',
-  getParentRoute: () => AppRoute,
+  getParentRoute: () => rootRouteImport,
 } as any)
 
 export interface FileRoutesByFullPath {
-  '/': typeof AppIndexRoute
-  '/catalog': typeof AppCatalogRoute
-  '/cellar': typeof AppCellarRoute
-  '/orders': typeof AppOrdersRoute
-  '/stack': typeof AppStackRoute
+  '/': typeof IndexRoute
 }
 export interface FileRoutesByTo {
-  '/catalog': typeof AppCatalogRoute
-  '/cellar': typeof AppCellarRoute
-  '/orders': typeof AppOrdersRoute
-  '/stack': typeof AppStackRoute
-  '/': typeof AppIndexRoute
+  '/': typeof IndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
-  '/_app': typeof AppRouteWithChildren
-  '/_app/catalog': typeof AppCatalogRoute
-  '/_app/cellar': typeof AppCellarRoute
-  '/_app/orders': typeof AppOrdersRoute
-  '/_app/stack': typeof AppStackRoute
-  '/_app/': typeof AppIndexRoute
+  '/': typeof IndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/catalog' | '/cellar' | '/orders' | '/stack'
+  fullPaths: '/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/catalog' | '/cellar' | '/orders' | '/stack' | '/'
-  id:
-    | '__root__'
-    | '/_app'
-    | '/_app/catalog'
-    | '/_app/cellar'
-    | '/_app/orders'
-    | '/_app/stack'
-    | '/_app/'
+  to: '/'
+  id: '__root__' | '/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
-  AppRoute: typeof AppRouteWithChildren
+  IndexRoute: typeof IndexRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/_app': {
-      id: '/_app'
-      path: ''
-      fullPath: '/'
-      preLoaderRoute: typeof AppRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/_app/': {
-      id: '/_app/'
+    '/': {
+      id: '/'
       path: '/'
       fullPath: '/'
-      preLoaderRoute: typeof AppIndexRouteImport
-      parentRoute: typeof AppRoute
-    }
-    '/_app/catalog': {
-      id: '/_app/catalog'
-      path: '/catalog'
-      fullPath: '/catalog'
-      preLoaderRoute: typeof AppCatalogRouteImport
-      parentRoute: typeof AppRoute
-    }
-    '/_app/cellar': {
-      id: '/_app/cellar'
-      path: '/cellar'
-      fullPath: '/cellar'
-      preLoaderRoute: typeof AppCellarRouteImport
-      parentRoute: typeof AppRoute
-    }
-    '/_app/orders': {
-      id: '/_app/orders'
-      path: '/orders'
-      fullPath: '/orders'
-      preLoaderRoute: typeof AppOrdersRouteImport
-      parentRoute: typeof AppRoute
-    }
-    '/_app/stack': {
-      id: '/_app/stack'
-      path: '/stack'
-      fullPath: '/stack'
-      preLoaderRoute: typeof AppStackRouteImport
-      parentRoute: typeof AppRoute
+      preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
     }
   }
 }
 
-interface AppRouteChildren {
-  AppCatalogRoute: typeof AppCatalogRoute
-  AppCellarRoute: typeof AppCellarRoute
-  AppOrdersRoute: typeof AppOrdersRoute
-  AppStackRoute: typeof AppStackRoute
-  AppIndexRoute: typeof AppIndexRoute
-}
-
-const AppRouteChildren: AppRouteChildren = {
-  AppCatalogRoute: AppCatalogRoute,
-  AppCellarRoute: AppCellarRoute,
-  AppOrdersRoute: AppOrdersRoute,
-  AppStackRoute: AppStackRoute,
-  AppIndexRoute: AppIndexRoute,
-}
-
-const AppRouteWithChildren = AppRoute._addFileChildren(AppRouteChildren)
-
 const rootRouteChildren: RootRouteChildren = {
-  AppRoute: AppRouteWithChildren,
+  IndexRoute: IndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

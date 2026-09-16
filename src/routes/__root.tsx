@@ -6,26 +6,22 @@ import {
 } from "@tanstack/react-router";
 import { AuthProvider } from "@/lib/auth/provider";
 import { PreviewHostBridge } from "@/components/preview-host-bridge";
-import { QueryProvider } from "@/components/query-provider";
 import { Toaster } from "sonner";
 import appCss from "../styles.css?url";
 
-const APP_NAME = "Northline";
+const APP_NAME = "Linen";
 
 export const Route = createRootRoute({
   head: () => ({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      {
-        title: APP_NAME,
-      },
+      { title: APP_NAME },
       {
         name: "description",
-        content:
-          "Wholesale coffee operations — PHP catalog, Java fulfillment, MariaDB core.",
+        content: "A quiet daily desk — intention, a short list, and a note.",
       },
-      { name: "theme-color", content: "#12100E" },
+      { name: "theme-color", content: "#F4F0EA" },
     ],
     links: [
       { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
@@ -46,17 +42,14 @@ function RootDocument() {
       <body className="bg-bg text-fg">
         <PreviewHostBridge />
         <AuthProvider>
-          <QueryProvider>
-            <Outlet />
-            <Toaster
-              theme="dark"
-              position="bottom-right"
-              toastOptions={{
-                className:
-                  "!bg-raised !text-fg !border-border !font-sans",
-              }}
-            />
-          </QueryProvider>
+          <Outlet />
+          <Toaster
+            theme="light"
+            position="bottom-right"
+            toastOptions={{
+              className: "!bg-raised !text-fg !border-border !font-sans",
+            }}
+          />
         </AuthProvider>
         <Scripts />
       </body>

@@ -12,8 +12,8 @@ var install_page_default = "<!DOCTYPE html>\n<html lang=\"en\" class=\"device-de
 //#endregion
 //#region \0virtual:grok-og-identity
 var grokOgIdentity = { "site": {
-	"title": "Northline",
-	"color": "12100E"
+	"title": "Linen",
+	"color": "F4F0EA"
 } };
 //#endregion
 //#region scripts/grok-pwa-shared.mjs
